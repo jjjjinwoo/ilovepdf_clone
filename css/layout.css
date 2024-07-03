@@ -1,0 +1,450 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* 공통 */
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.1px;
+}
+a {
+  text-decoration: none;
+  color: #161616;
+}
+h2 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 52px;
+  color: #33333b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.title_p {
+  line-height: 32px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #47474f;
+  text-align: center;
+  width: 63%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+i {
+  display: inline-block;
+}
+
+/* header */
+
+header {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  position: fixed;
+}
+#gnb {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+header nav > ul {
+  display: flex;
+}
+header .primenu {
+  height: 60px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 60px;
+  padding: 0 24px;
+}
+header li > .icon::after {
+  content: "아이디";
+  display: inline-block;
+  font-size: 0;
+  /* background-color: #5691ff; */
+  width: 8px;
+  height: 5px;
+  position: relative;
+  top: 21px;
+  background-image: url(../img/sprite.svg);
+  background-position: 56px -146px;
+  margin: 0 8px;
+}
+#header_btn {
+  display: flex;
+}
+#header_btn a {
+  font-size: 14px;
+}
+#header_btn a:nth-child(1) {
+  display: block;
+  height: 32px;
+  width: 35px;
+  align-self: center;
+  background-image: url(../img/sprite.svg);
+  background-position: 58px -28px;
+  margin: 0 10px;
+}
+#header_btn a:nth-child(2) {
+  height: 30px;
+  width: 60px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 500;
+}
+#header_btn a:nth-child(3) {
+  background-color: #e5322d;
+  height: 30px;
+  width: 75px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 800;
+  transition: 0.3s;
+}
+#header_btn a:nth-child(4) {
+  display: block;
+  height: 18px;
+  width: 24px;
+  align-self: center;
+  background-image: url(../img/sprite.svg);
+  background-position: 57px -5px;
+  margin: 0 20px;
+}
+header a:hover {
+  color: #e5322d;
+}
+header li .icon:hover::after {
+  background-position: 56px -166px;
+}
+#header_btn a:nth-child(3):hover {
+  filter: brightness(0.7);
+  transition: 0.3s;
+}
+.submenu_con {
+  margin-top: 0;
+  padding: 10px 30px 20px 40px;
+  width: 446px;
+  position: absolute;
+  column-gap: 40px;
+  left: -200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+header nav ul > li:nth-child(4):hover .submenu_con {
+  display: flex;
+}
+.submenu .btn {
+  height: 54px;
+  width: 200px;
+  background-color: #ffffff;
+  position: relative;
+  left: -10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.submenu .btn:hover {
+  background-color: #f7f7f7;
+  color: #e5322d;
+}
+.submenu .btn::before {
+  display: block;
+  content: "아이콘";
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  /* background-color: #e5322d; */
+  background-image: url(../img/sprite.svg);
+  background-position: -5px -180px;
+  left: 10px;
+  top: 15px;
+}
+.submenu .btn::after {
+  content: "JPG PDF 변환";
+  position: relative;
+  left: 40px;
+  top: -25px;
+  font-size: 13px;
+}
+.submenu .title {
+  height: 54px;
+  line-height: 54px;
+  color: #707078;
+  font-size: 13px;
+}
+header .primenu:nth-child(4) {
+  position: relative;
+}
+
+/* section1 */
+
+.section1 {
+  padding: 120px 60px;
+  background-image: url(../img/background.svg);
+  height: fit-content;
+  background-position: center center;
+  background-size: 100% auto;
+  background-color: #faf7f7;
+  background-attachment: fixed;
+}
+.section1 h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #33333b;
+  margin-bottom: 8px;
+  margin-top: 62px;
+}
+.section1 .card_p {
+  width: 227px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-size: 13px;
+  color: #707078;
+}
+.section1 .box_con .box {
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+  padding: 32px;
+  min-height: 159px;
+  margin: 2px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  max-width: 12.9%;
+}
+.section1 div div > svg {
+  margin-bottom: 20px;
+  position: absolute;
+}
+.section1 .box_con {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.section1 .box {
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+.section1 .box:hover {
+  background-color: #f8f8f8;
+  transition: 0.3s;
+}
+.section1 .box:hover svg {
+  width: 24%;
+  height: 24%;
+  left: 20px;
+  top: 30px;
+}
+.section1 .box .new {
+  border-color: #bd060a;
+  color: #e5322d;
+  position: absolute;
+  font-size: 12px;
+  border: 1px solid #bd060a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  top: 10px;
+  right: 10px;
+}
+
+/* section2 */
+
+.section2 {
+  height: fit-content;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+.section2 > div {
+  display: flex;
+  column-gap: 50px;
+  box-sizing: border-box;
+  padding: 0 200px;
+  margin: 100px 0 20px 0;
+}
+.section2 div > div {
+  height: fit-content;
+  width: 100%;
+}
+.section2 h3 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 30px;
+  color: #33333b;
+  margin-bottom: 12px;
+}
+.section2 p {
+  color: #707078;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.section2 a {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #e5322d;
+  cursor: pointer;
+}
+.section2 a:hover {
+  color: #33333b;
+}
+
+/* section3 */
+
+.section3 {
+  padding: 120px 60px 90px 60px;
+  background-image: url(../img/background.svg);
+  height: fit-content;
+  background-position: center center;
+  background-size: 100% auto;
+  background-color: #faf7f7;
+  background-attachment: fixed;
+}
+.section3 > div {
+  width: 400px;
+  height: fit-content;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 100px;
+}
+.section3 div > div {
+  width: fit-content;
+  height: 30px;
+}
+.section3 img {
+  height: 30px;
+}
+
+/* section4 */
+
+.section4 {
+  padding: 120px 200px;
+  height: fit-content;
+  background-position: center center;
+  background-size: 100% auto;
+  background-color: #47474f;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 100px;
+  box-sizing: border-box;
+}
+.section4 > div {
+  max-width: 60%;
+}
+.section4 h2,
+.section4 p {
+  color: white;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.section4 a {
+  padding: 14px 18px;
+  background-color: #ffc233;
+  border-radius: 8px;
+  margin-top: 24px;
+  display: inline-block;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.section4 a:hover {
+  filter: brightness(0.8);
+  transition: 0.3s;
+}
+
+/* footer */
+
+footer {
+  padding: 50px 200px;
+  background-color: #f5f5fa;
+}
+footer > .list {
+  display: flex;
+  justify-content: space-between;
+}
+footer .list > ul {
+  width: 100%;
+}
+footer li {
+  color: #47474f;
+  font-weight: 400;
+  line-height: 32px;
+}
+footer ul > h3 {
+  color: #e5322d;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+footer ul li > a:hover {
+  color: #e5322d;
+}
+footer .store {
+  margin: 70px 0 30px 0;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
+}
+footer .line {
+  height: 1px;
+  width: 100%;
+  background-color: #b4b4b4;
+}
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+footer .language {
+  cursor: pointer;
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+footer nav .language i:first-child {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/sprite.svg);
+  background-position: -30px -280px;
+}
+footer nav .language i:last-child {
+  width: 8px;
+  height: 5px;
+  background-image: url(../img/sprite.svg);
+  background-position: 56px -146px;
+}
+footer nav > div {
+  display: flex;
+  column-gap: 22px;
+  align-items: center;
+}
+footer nav .sns {
+  display: flex;
+  column-gap: 8px;
+}
+footer span {
+  color: #47474f;
+}
+footer .sns img {
+  opacity: 70%;
+  transition: 0.5s;
+}
+footer .sns img:hover {
+  opacity: 100%;
+  transition: 0.5s;
+}
