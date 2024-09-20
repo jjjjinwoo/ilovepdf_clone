@@ -235,6 +235,7 @@ header .primenu:nth-child(4) {
   margin: 0 auto;
 }
 .section1 .box {
+  display: block;
   cursor: pointer;
   transition: 0.3s;
   position: relative;
