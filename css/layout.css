@@ -386,7 +386,7 @@ footer li {
   font-weight: 400;
   line-height: 32px;
 }
-footer ul > h3 {
+footer ul h3 {
   color: #e5322d;
   font-weight: 600;
   margin-bottom: 16px;
